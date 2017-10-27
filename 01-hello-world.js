@@ -1,9 +1,8 @@
-var express = require('express');
+var express = require('express'); // include
 var app = express();
 
-app.get('/', function(req, res) {
-  res.type('text/plain');
-  res.send('Hell , its about time!!');
-});
+var endpoints = require('./endpoints'); // include
+var endpointslib = endpoints();
 
+endpointslib.show_endpoints(app);
 app.listen(process.env.PORT || 8080);
