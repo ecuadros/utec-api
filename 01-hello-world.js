@@ -1,8 +1,9 @@
 var express = require('express'); // include
-var app = express();
-
 var endpoints = require('./endpoints'); // include
-var endpointslib = endpoints();
 
-endpointslib.show_endpoints(app);
+var app = express();
+var endpointslib = new endpoints();
+
+endpointslib.execute(app);
+
 app.listen(process.env.PORT || 8080);

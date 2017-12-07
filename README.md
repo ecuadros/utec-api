@@ -1,6 +1,6 @@
-# FAKE-REST-API
+# API Demo
 
-This repo is a fast alternative  when you need some fake data.  It's great for development environments, tutorials, faking a server, sharing code examples, jokes, etc 
+This repo is a simple example of "How create a API with node.js"
 
 
 ## Getting Started
@@ -21,9 +21,11 @@ Node JS
 npm intall
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Running apis
 
-## Running fake rest apis
+1. Api hello world
+
+This api expose 2 endpoints
 
 Launch **01-hello-world.js** execute :
 
@@ -35,22 +37,8 @@ If no errors in log, go to your browser and type :
 
 ```
 http://localhost:8080/
+http://localhost:8080/register
 ```
-
-And you get
-
-```
-i am a beautiful butterfly
-```
-
-Analogously:
-
-| Rest example        | node launch           | rest endpoint  |	description  |
-| ------------- |:-------------:| -----:| -----:|
-| 01-hello-world.js      | node 01-hello-world.js | http://localhost:8080/ |  simple hello word 
-| 02-quote.js      | node 02-quote.js | http://localhost:8080/quotes | javascript object to json, simple crud
-| 03-cors-companies.js      | node 03-cors-companies.js | http://localhost:8080/companies | using cors in node
-
 
 ## Versioning
 
@@ -58,6 +46,7 @@ Analogously:
 
 ## Authors
 
+* **Ernesto Cuadros**
 * **Richard Leon Ingaruca** - *Initial work* - [Jrichardsz](https://github.com/jrichardsz)
 
 
@@ -70,4 +59,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
-

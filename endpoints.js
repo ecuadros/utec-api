@@ -1,8 +1,10 @@
 
-var show_endpoints = function(app)
-{
+function show_endpoints() {
+}
+
+show_endpoints.prototype.execute = function(app) {
 	// Exponer end points
-	app.get('/', 
+	app.get('/',
 		function(req, res)
 		{
 	  		res.type('text/plain');
@@ -10,13 +12,14 @@ var show_endpoints = function(app)
 		}
 	);
 
-	app.get('/register', 
+	app.get('/register',
 		function(req, res)
 		{
 	  		res.type('text/plain');
 	  		res.send('Registro!!');
 		}
 	);
-}
+};
+
 
 module.exports = show_endpoints;
