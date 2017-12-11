@@ -12,13 +12,20 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Node JS
+Ubuntu: sudo apt-get install nodejs
+```
+### clonar repositorio
+
+### Installing libraries
+
+```
+npm install
 ```
 
-### Installing
-
+### Killing existing tasks
 ```
-npm intall
+netstat -tulpn
+kill -9 pID
 ```
 
 ## Running apis
@@ -31,6 +38,7 @@ Launch **01-hello-world.js** execute :
 
 ```
 node 01-hello-world.js
+nodemon 01-hello-world.js
 ```
 
 If no errors in log, go to your browser and type :

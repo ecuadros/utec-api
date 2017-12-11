@@ -1,8 +1,11 @@
 
-function show_endpoints() {
+function show_endpoints()
+{
+  
 }
 
-show_endpoints.prototype.execute = function(app) {
+show_endpoints.prototype.execute = function(app)
+{
 	// Exponer end points
 	app.get('/',
 		function(req, res)
