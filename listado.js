@@ -13,7 +13,7 @@ listado.prototype.execute = function(app)
 		{
 	  		res.type('text/plain');
 // 			const testFolder = '/home/ecuadros/.';
-			const testFolder = '/home/ecuadros/Articles/Curricula/Curricula.in/lang/Espanol/cycle/2018-I/Syllabi/Computing/CS/';
+			const testFolder = '/home/.';
 			var output = "";
 			var list = fs.readdirSync(testFolder);
 			res.send(list);
