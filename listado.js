@@ -2,7 +2,6 @@ const fs = require('fs');
 
 function listado()
 {
-  
 }
 
 listado.prototype.execute = function(app)
@@ -12,21 +11,10 @@ listado.prototype.execute = function(app)
 		function(req, res)
 		{
 	  		res.type('text/plain');
-// 			const testFolder = '/home/ecuadros/.';
-			const testFolder = '/home/.';
+			const testFolder = process.env.PDFS_PATH;
 			var output = "";
 			var list = fs.readdirSync(testFolder);
 			res.send(list);
-			
-// 	  		fs.readdir(testFolder, (err, files) => 
-// 	  		{
-// 			  if(err)
-// 			  { console.log("Error:"+err);	}
-// 			  else
-// 			  {
-// 			      res.send(files);
-// 			  }
-// 			})
 		}
 	);
 };
