@@ -13,10 +13,36 @@ listado.prototype.execute = function(app)
 	  		res.type('text/plain');
 			const testFolder = process.env.PDFS_PATH;
 			var output = "";
-			var list = fs.readdirSync(testFolder);
-			res.send(list);
+			try
+			{
+				var list = fs.readdirSync(testFolder);
+				res.send(list);
+			}
+			catch(error)
+			{
+				res.send("Error:"+error +"(PDFS_PATH does not exit)");
+			}
+			
 		}
 	);
+	app.get('/async',
+		function(req, res)
+		{
+	  		res.type('text/plain');
+			const testFolder = process.env.PDFS_PATH;
+			var output = "";
+
+			fs.readdir(testFolder, (err, files) => {
+				res.send(files);
+				console.log("after send");
+			});
+
+			res.send("after async");
+		}
+	);
+
+
+
 };
 
 
